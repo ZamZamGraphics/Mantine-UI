@@ -1,7 +1,7 @@
 import { Button, Flex } from "@mantine/core";
 import Link from "next/link";
 
-export default function Home() {
+export default function LoginPage() {
   return (
     <Flex
       mih={800}
@@ -11,8 +11,8 @@ export default function Home() {
       direction="row"
       wrap="wrap"
     >
-      <Button component={Link} href="/login">
-        Login
+      <Button component={Link} href="/">
+        Home
       </Button>
       <Button component={Link} href="/dashboard">
         Dashboard

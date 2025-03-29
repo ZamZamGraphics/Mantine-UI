@@ -3,22 +3,11 @@ import Logo from "@/components/Logo";
 import Dropdown from "@/components/header/Dropdown";
 import Sidebar from "@/components/sidebar";
 import ThemeSwitch from "@/components/theme/ThemeSwitch";
-import {
-  AppShell,
-  Box,
-  Burger,
-  Flex,
-  Group,
-  ScrollArea,
-  useMantineColorScheme,
-  useMantineTheme,
-} from "@mantine/core";
+import { AppShell, Box, Burger, Flex, Group, ScrollArea } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 
 export function DashboardLayout({ children }) {
   const [opened, { toggle }] = useDisclosure();
-  const { colorScheme } = useMantineColorScheme();
-  const theme = useMantineTheme();
 
   return (
     <AppShell
@@ -26,12 +15,7 @@ export function DashboardLayout({ children }) {
       navbar={{ width: 230, breakpoint: "sm", collapsed: { mobile: !opened } }}
       padding="md"
     >
-      <AppShell.Header
-        style={{
-          backgroundColor:
-            colorScheme === "dark" ? theme.colors.dark[9] : theme.white,
-        }}
-      >
+      <AppShell.Header className="bg-white">
         <Group justify="space-between" px="md">
           <Flex align="center">
             <Burger
@@ -47,12 +31,7 @@ export function DashboardLayout({ children }) {
           </Box>
         </Group>
       </AppShell.Header>
-      <AppShell.Navbar
-        style={{
-          backgroundColor:
-            colorScheme === "dark" ? theme.colors.dark[9] : theme.white,
-        }}
-      >
+      <AppShell.Navbar className="bg-white">
         <AppShell.Section grow my="md" component={ScrollArea}>
           <Sidebar />
         </AppShell.Section>

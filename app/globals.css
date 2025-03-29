@@ -3,9 +3,15 @@
 /* For light mode */
 :root[data-mantine-color-scheme="light"] {
   --mantine-color-body: var(--mantine-color-gray-1) !important;
+  --bg-white: var(--mantine-color-white) !important;
 }
 
 /* For dark mode */
 :root[data-mantine-color-scheme="dark"] {
   --mantine-color-body: var(--mantine-color-gray-9) !important;
+  --bg-white: var(--mantine-color-dark-9);
+}
+
+.bg-white {
+  background-color: var(--bg-white) !important;
 }
